@@ -42,10 +42,18 @@ ObjectQuel::persist($product);
 ObjectQuel::flush();
 
 // Executing a query
-$results = ObjectQuel::executeQuery('MATCH (u:User) WHERE u.id = :id RETURN u', ['id' => 1]);
+$results = ObjectQuel::executeQuery('
+    range of x is UserEntity
+    retrieve (x) WHERE u.id = :id
+', [
+    'id' => 1
+]);
 
 // Getting all results
-$users = ObjectQuel::getAll('MATCH (u:User) RETURN u');
+$users = ObjectQuel::getAll('
+    range of x is UserEntity
+    retrieve (x)
+');
 
 // Removing an entity
 ObjectQuel::remove($user);
