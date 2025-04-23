@@ -1,0 +1,46 @@
+{
+  "name": "quellabs/laravel-objectquel",
+  "description": "Laravel integration for the ObjectQuel ORM system",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Floris van den Berg",
+      "email": "info@quellabs.com"
+    }
+  ],
+  "keywords": [
+    "Laravel",
+    "ORM",
+    "ObjectQuel",
+    "query language",
+    "entity manager"
+  ],
+  "support": {
+    "email": "support@quellabs.com",
+    "issues": "https://github.com/quellabs/laravel-objectquel/issues",
+    "source": "https://github.com/quellabs/laravel-objectquel"
+  },
+  "require": {
+    "php": ">=8.3",
+    "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+    "quellabs/objectquel": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Quellabs\\ObjectQuel\\Laravel\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Quellabs\\ObjectQuel\\Laravel\\ObjectQuelServiceProvider"
+      ],
+      "aliases": {
+        "ObjectQuel": "Quellabs\\ObjectQuel\\Laravel\\ObjectQuel"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

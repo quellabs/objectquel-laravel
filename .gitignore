@@ -1,0 +1,35 @@
+# Composer dependencies
+/vendor
+composer.lock
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+.DS_Store
+
+# Environment files
+.env
+.env.backup
+
+# Cache and generated files
+.phpunit.result.cache
+build/
+*.cache
+*.log
+
+# Generated proxies and cache from ObjectQuel
+storage/
+bootstrap/cache/
+
+# Testing
+/coverage
+.phpunit.cache
+
+# Node modules (if using any JS tools for docs)
+/node_modules
+/npm-debug.log
+/yarn-error.log
