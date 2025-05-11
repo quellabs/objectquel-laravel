@@ -3,7 +3,7 @@
 	namespace Quellabs\ObjectQuel\Laravel;
 	
 	use Illuminate\Support\Facades\Facade;
-	use Quellabs\ObjectQuel\EntityManager\EntityManager;
+	use Quellabs\ObjectQuel\EntityManager;
 	use Quellabs\ObjectQuel\ObjectQuel\QuelResult;
 	
 	/**
@@ -19,7 +19,7 @@
 	 * @method static array getValidationRules(object $entity)
 	 * @method static bool entityExists(string $entityName)
 	 *
-	 * @see \Quellabs\ObjectQuel\EntityManager\EntityManager
+	 * @see \Quellabs\ObjectQuel\EntityManager
 	 */
 	class ObjectQuel extends Facade {
 		
@@ -27,7 +27,7 @@
 		 * Get the registered name of the component.
 		 * @return string
 		 */
-		protected static function getFacadeAccessor() {
+		protected static function getFacadeAccessor(): string {
 			return EntityManager::class;
 		}
 	}
